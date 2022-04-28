@@ -8,6 +8,9 @@ resource "aws_s3_bucket" "data" {
   force_destroy = true
   tags = merge({
     Name        = "${local.resource_prefix.value}-data"
+    
+    
+    
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
@@ -23,6 +26,9 @@ resource "aws_s3_bucket" "data" {
 
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
+  
+  
+  
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
   tags = merge({
