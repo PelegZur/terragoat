@@ -10,6 +10,8 @@ resource "aws_s3_bucket" "data" {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     }, {
+
+
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
     git_file             = "terraform/aws/s3.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
@@ -30,6 +32,8 @@ resource "aws_s3_bucket_object" "data_object" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+
+
     git_file             = "terraform/aws/s3.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
@@ -38,9 +42,12 @@ resource "aws_s3_bucket_object" "data_object" {
     git_repo             = "terragoat"
     yor_trace            = "a7f01cc7-63c2-41a8-8555-6665e5e39a64"
   })
+
 }
 
 resource "aws_s3_bucket" "financials" {
+
+
   # bucket is not encrypted
   # bucket does not have access logs
   # bucket does not have versioning
